@@ -1,0 +1,230 @@
+/* BookingForm.module.css */
+.formBox {
+  background: #f1f1f1;
+  border: 1px solid #cecece;
+  border-radius: 16px;
+  padding: 0 0 24px 0;
+  width: 100%;
+  max-width: 680px;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.15);
+  overflow: visible; /* allow dropdown to overflow */
+}
+
+/* ── Tabs ── */
+.tabs {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  border-bottom: 1px solid #c8c8c8;
+}
+
+.tabBtn {
+  background: none;
+  border: none;
+  padding: 10px 24px;
+  font-family: var(--font-poppins), 'Poppins', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #216900;
+  cursor: pointer;
+  border-radius: 8px;
+  flex: 1;
+  text-align: center;
+  transition: background 0.2s, color 0.2s;
+}
+
+.tabBtn:hover:not(.tabActive) {
+  background: #e8f5e3;
+}
+
+.tabActive {
+  background: #216900;
+  color: #fff;
+}
+
+/* ── Trip Type ── */
+.tripType {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  padding: 14px 24px;
+}
+
+.radioLabel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-family: var(--font-poppins), 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #4a4e5e;
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  transition: border-color 0.2s;
+  user-select: none;
+}
+
+.radioActive {
+  border-color: #38b000;
+}
+
+.radioDot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 3px solid #dbe3ed;
+  background: #fff;
+  flex-shrink: 0;
+  transition: all 0.2s;
+}
+
+.radioDotActive {
+  background: #38b000;
+  border-color: #fff;
+  box-shadow: 0 0 0 2px #38b000;
+}
+
+/* ── Fields ── */
+.fields {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 0 16px;
+  margin-top: 4px;
+}
+
+.fieldRow {
+  display: flex;
+  gap: 24px;
+  align-items: flex-end;
+  position: relative;
+}
+
+.fieldRowHalf {
+  display: flex;
+  gap: 24px;
+  width: 50%;
+}
+
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+  position: relative;
+}
+
+.fieldGroupWithIcons {
+  display: flex;
+  align-items: flex-end;
+  flex: 1;
+  gap: 6px;
+  position: relative;
+}
+
+.swapIcons {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding-bottom: 10px;
+  flex-shrink: 0;
+  opacity: 0.7;
+}
+
+.fieldLabel {
+  font-family: var(--font-poppins), 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #585858;
+  line-height: 20px;
+  margin-bottom: 4px;
+}
+
+.inputWrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-bottom: 1px solid #585858;
+  padding-bottom: 8px;
+  height: 40px;
+  transition: border-color 0.2s;
+}
+
+.inputWrap:focus-within {
+  border-bottom-color: #216900;
+}
+
+.input {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: var(--font-poppins), 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  letter-spacing: -0.08px;
+  width: 100%;
+  min-width: 0;
+}
+
+.input::placeholder {
+  color: #8d97b0;
+}
+
+.input[type='date'],
+.input[type='time'] {
+  color: #8d97b0;
+}
+
+.input[type='date']:not(:placeholder-shown),
+.input[type='time']:not(:placeholder-shown) {
+  color: #333;
+}
+
+.timeInput {
+  font-size: 16px;
+  font-weight: 500;
+  color: #8d97b0;
+}
+
+/* ── CTA ── */
+.ctaRow {
+  display: flex;
+  justify-content: center;
+  padding: 24px 16px 0;
+}
+
+.cta {
+  background: #216900;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 40px;
+  font-family: var(--font-poppins), 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+  letter-spacing: 0.5px;
+}
+
+.cta:hover {
+  background: #1a5200;
+  transform: translateY(-1px);
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  .fieldRow {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .fieldRowHalf {
+    width: 100%;
+  }
+  .formBox {
+    max-width: 100%;
+  }
+}
